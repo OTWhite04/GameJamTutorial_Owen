@@ -24,6 +24,19 @@ public class RespawnScript : MonoBehaviour
         }
     }
 
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.CompareTag("Obstacle"))
+        {
+            Respawn();
+            
+        }
+    }
+
+
+
+
+
 
     void Respawn()
     {
